@@ -1,11 +1,15 @@
 * {
-    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    margin: 0 auto;
     scroll-behavior: smooth;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .container {
     max-width: 1140px;
+    margin: 0 auto;
 }
 h2 {
     color: #3677fd;
@@ -15,12 +19,8 @@ h2 {
     text-align: center;
 }
 header {
-    background: url("../img/header.webp") no-repeat center center;
+    background: url("../img/header.jpg") no-repeat center center;
     height: 90vh;
-}
-.background-lines {
-    background: url("../img/header-lines.png") no-repeat center left;
-    height: 100%;
 }
 .header-content {
     display: flex;
@@ -29,17 +29,7 @@ header {
     align-items: center;
 }
 .circles {
-    padding: 95px 0 53px 0;
-}
-.circle-1 {
-    background: url("../img/ellips2.png") no-repeat center center;
-    height: 185px;
-    width: 185px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
+    padding: 95px 0 30px 0;
 }
 .circle-2 {
     background: url("../img/Elipsa_2.png") no-repeat center center;
@@ -49,11 +39,27 @@ header {
     justify-content: center;
     align-items: center;
 }
+.circle-2::before {
+    content: '';
+    opacity: 0.06;
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 185px;
+    width: 185px;
+    position: absolute;
+}
+.circle-2::after {
+    content: '';
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
 .circle-2 img {
     height: 140px;
 }
 .header-text {
-    width: 809px;
+    max-width: 809px;
     color: #ffffff;
     font-size: 50px;
     font-weight: 900;
@@ -61,14 +67,14 @@ header {
     text-align: center;
 }
 .header-p {
-    width: 765px;
+    max-width: 765px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
     line-height: 30px;
     text-transform: uppercase;
     text-align: center;
-    margin: 42px 0 75px 0;
+    margin: 0px 0 75px 0;
 }
 .btn {
     padding: 22px 70px 22px 70px;
@@ -81,8 +87,11 @@ header {
     transition: all 0.2s;
     cursor: pointer;
 }
-header button {
-    margin-bottom: 92px;
+button:focus {
+    outline: none;
+}
+header .btn {
+    margin-bottom: 70px;
 }
 .btn:hover {
     background-color:rgb(230, 230, 230);
@@ -91,6 +100,7 @@ header button {
     background: url("../img/anchor.png") no-repeat center center;
     width: 19px;
     height: 32px;
+    
 }
 .about {
     margin-bottom: 115px;
@@ -100,8 +110,8 @@ header button {
 }
 .about p {
     text-align: center;
-    margin-top: 60px;
-    width: 1067px;
+    margin-top: 30px;
+    max-width: 1067px;
     height: 85px;
     color: #5a5a5a;
     font-size: 16px;
@@ -187,16 +197,17 @@ header button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 0 100px 0;
+    padding: 60px 0 100px 0;
 }
 .companies img:nth-child(2) {
     width: 185px;
     height: 28px;
 }
 .footer-info {
-    padding: 90px 0 90px 0;
+    padding: 65px 0 65px 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 footer {
     background: url("../img/lines.png") no-repeat center left;
@@ -212,6 +223,9 @@ footer h1 {
 footer span {
     color: #ffffff;
     font-weight: 700;
+}
+footer .btn {
+    height: 60px;
 }
 .cookie {
     padding: 22px 0 22px 0;
@@ -241,8 +255,9 @@ footer span {
 .cookie-width {
     max-width: 520px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 .cookie-none {
     display: none;

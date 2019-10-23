@@ -19,7 +19,6 @@
         </div>
     </div>
     <header>
-        <div class="background-lines">
         <div class="menu-wrap container">
             <input type="checkbox" class="toggler">
             <div class="hamburger"><div></div></div>
@@ -40,7 +39,7 @@
             <div class="circles">
                 <div class="circle-1">
                     <div class="circle-2">
-                        <img src="img/ellips.png" alt="">
+                        
                     </div>
                 </div>
             </div>
@@ -54,7 +53,6 @@
             <button class="btn">hire me</button>
             <a href="#header-anchor" class="header-anchor"></a>
         </section>
-        </div>
     </header>
     <main>
         <section class="container about" id="header-anchor">
@@ -171,6 +169,11 @@
         </div>
     </footer>
     <!-- just to close cookie window -->
-    <script src="script.js"></script> 
+<script>
+    function closeForm() {
+        let element = document.querySelector(".cookie");
+        element.classList.toggle("cookie-none");
+    }
+</script> 
 </body>
 </html>
